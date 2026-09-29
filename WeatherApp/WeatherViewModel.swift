@@ -21,7 +21,7 @@ class WeatherViewModel: ObservableObject {
         errorMessage = nil
 
         do {
-            // Koordinat Jakarta — hardcode dulu, biar simpel
+            // Koordinat Jakarta
             let result = try await service.fetchWeather(latitude: -6.2088, longitude: 106.8456)
             temperature = result.currentWeather.temperature
             windspeed = result.currentWeather.windspeed
